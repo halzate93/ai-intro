@@ -25,6 +25,6 @@ public class SimpleFollow : MonoBehaviour
 	{
 		// Get distance and compare
 		Vector3 direction = target.position - transform.position;
-		return direction.magnitude > threshold;
+		return direction.sqrMagnitude > threshold * threshold;
 	}
 }
