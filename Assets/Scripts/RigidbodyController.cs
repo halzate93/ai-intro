@@ -18,9 +18,16 @@ public class RigidbodyController : MonoBehaviour
 		animator = GetComponent<Animator> ();
 	}
 	
+	private void Start ()
+	{
+		// Setup NavMeshAgent so it doesn't move the character
+		agent.updatePosition = false;
+	}
+
 	private void Update () 
 	{
 		// The path is recalculated every frame, and the movement can be more complex: dash, climb, etc.
+		Debug.Log (agent.desiredVelocity);
 		rigidbody.velocity = agent.desiredVelocity;
 		SyncAnimation ();
 	}

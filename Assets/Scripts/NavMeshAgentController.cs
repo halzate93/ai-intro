@@ -9,7 +9,13 @@ public class NavMeshAgentController : MonoBehaviour
 	private NavMeshAgent agent;
 	private Animator animator;
 
-	private bool isMoving;
+	public bool IsMoving
+	{
+		get
+		{
+			return agent.pathPending || agent.remainingDistance > agent.stoppingDistance;
+		}
+	}
 
 	private void Awake ()
 	{
@@ -27,19 +33,18 @@ public class NavMeshAgentController : MonoBehaviour
 	{
 		// Set the agents new destination
 		agent.destination = destination;
+		agent.Resume ();
+	}
+
+	public void Stop ()
+	{
+		agent.Stop ();
 	}
 
 	private void SyncAnimation ()
 	{
 		// Set speed parameter in animator
-		bool isMoving = CheckIsMoving ();
-		float speed = isMoving? 1f : 0f;
+		float speed = IsMoving? 1f : 0f;
 		animator.SetFloat ("Speed", speed);
-	}
-
-	private bool CheckIsMoving ()
-	{
-		// Check if agent reached last node and the distance inside the node is close enough to the target
-		return agent.pathPending || agent.remainingDistance > agent.stoppingDistance;
 	}
 }
