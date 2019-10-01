@@ -1,0 +1,17 @@
+﻿<Properties StartupConfiguration="{A3B60E1C-6E41-E7D4-8CCD-AAB80A6B6B63}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/States/BearAIController.cs">
+    <Files>
+      <File FileName="Assets/Scripts/SimpleAgent.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/SimpleAgent.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/NavMeshAgentController.cs" Line="23" Column="30" />
+      <File FileName="Assets/Scripts/States/BearAIController.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="9b651b7a-3bf2-47f1-9493-bc57710e5b41" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
